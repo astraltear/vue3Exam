@@ -1,4 +1,4 @@
-# moz-todo-vue3
+# vue3 examples
 
 ## Project setup
 ```
