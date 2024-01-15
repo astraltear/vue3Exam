@@ -1,5 +1,5 @@
 <template>
-
+ <h1>Vue2</h1>
 refmsg : <input type="text" id="inputText" v-model="refmsg"><br>
 {{ refmsg }}<br>
 
@@ -50,6 +50,7 @@ objItem : {{ objItem }}
 =========================$ExamVue2 data start===========================
 <div>result : {{ result }}</div>
 =========================$ExamVue2 data end===========================
+<hr>
 </template>
 
 <script >

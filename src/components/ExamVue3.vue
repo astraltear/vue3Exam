@@ -1,5 +1,5 @@
 <template>
-
+ <h1>Vue3</h1>
 <ul>
     <li v-for="i in fruits" v-bind:key="i">{{i}} </li>
 </ul>
@@ -16,6 +16,7 @@
 <input type="number" name="price" v-model="price">
 <div>reservedTitle: {{reservedTitle}}</div>
 <div>supplyAmt: {{supplyAmt}}</div>
+<hr>
 
 </template>
 <script>

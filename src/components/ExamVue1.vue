@@ -1,5 +1,5 @@
 <template>
- 
+ <h1>Vue1</h1>
 <!--  
   v-model , v-bind
 
@@ -51,11 +51,24 @@ stories : {{ stories }}<br>
 =========================$ExamVue1 data start ===========================
 <div>data : {{ $data }}</div>
 =========================$ExamVue1 data end ===========================
+<hr>
+
 </template>
 
 <script>
 
 export default {
+/*
+    data 속성은 컴포넌트의 상태 데이터를 정의하는 데 사용되는 옵션
+    data는 함수로 정의되며, 이 함수는 컴포넌트의 각 인스턴스에 대해 호출되어 해당 인스턴스에 속한 데이터 객체를 반환
+
+    아래와 같이 객체로 작성할 수도 있으나 
+    여러 인스턴스에서 데이터를 공유하게 되므로 원하지 않는 동작이 발생할 수 있습니다.
+    (exam2.html, vue-instance.html)
+    data: {
+      message: '안녕하세요, Vue!'
+    }
+*/
   data(){
     return {
       selectedOption : 'option3',

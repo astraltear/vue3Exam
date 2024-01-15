@@ -3,6 +3,7 @@
 <examvue1></examvue1>
 <exam-vue2></exam-vue2>
 <ExamVue3></ExamVue3>
+<ExamVue4></ExamVue4>
   
 </template>
 
@@ -11,12 +12,14 @@
 import examvue1  from './components/ExamVue1.vue'
 import ExamVue2 from './components/ExamVue2.vue';
 import ExamVue3 from './components/ExamVue3.vue';
+import ExamVue4 from './components/ExamVue4.vue';
 
 export default {
   components: {
     examvue1,
     ExamVue2,
     ExamVue3,
+    ExamVue4,
 
   },
 }
@@ -32,3 +35,4 @@ export default {
   margin-top: 60px;
 }
 </style>
+
