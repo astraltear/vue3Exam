@@ -44,10 +44,10 @@ export default {
             return this.message.toUpperCase();
         },
         reservedTitle : function () {
-                console.log("reservedTitle");
-                let temp = this.price;
-                return "computed actived"+Math.random();
-            },
+            console.log("reservedTitle");
+            let temp = this.price;
+            return "computed actived"+Math.random();
+        },
 
     }
 }
