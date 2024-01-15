@@ -1,6 +1,6 @@
 <template>
  <h1>Vue4</h1>
-<li v-for=" e in elects" v-bind:key="e">
+<li v-for=" e in elects" v-bind:key="e.name">
     {{e.name}}  ||  {{e.count}} <button v-on:click="e.count++">votes</button>
 </li>
 
@@ -11,7 +11,7 @@
 <hr>
 </template>
 <script>
-/* eslint-disable */
+
 export default {
     data() {
         return {
