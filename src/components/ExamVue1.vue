@@ -64,7 +64,6 @@ export default {
 
     아래와 같이 객체로 작성할 수도 있으나 
     여러 인스턴스에서 데이터를 공유하게 되므로 원하지 않는 동작이 발생할 수 있습니다.
-    (exam2.html, vue-instance.html)
     data: {
       message: '안녕하세요, Vue!'
     }

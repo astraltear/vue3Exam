@@ -57,44 +57,40 @@ objItem : {{ objItem }}
 import {reactive, ref,onBeforeMount,onMounted,onBeforeUpdate,onUpdated,onBeforeUnmount,onUnmounted } from 'vue'
 
 export default {
-    /*
-
-  이러한 Composition API 함수들은 Vue 3에서 도입되었으며, 
-  구성 기반 API로 코드를 조직화하고 재사용 가능한 로직을 생성하는 데 유용
-  ref()와 reactive()는 Vue의 반응성 시스템을 활용하여 데이터를 관리하고 화면을 업데이트하는 데 도움
-
+/*
+ 
   setup 함수는 Vue 3에서 도입된 새로운 옵셔널 API 중 하나입니다. 
   이 함수는 컴포넌트의 초기 설정을 담당하며, 
   data, computed, methods, watch, props 등과 같은 옵션 API를 대체
 
 */
   setup(){
-    // 컴포넌트가 마운트되기 전에 실행됨
+    
     onBeforeMount(() => {
       console.log('컴포넌트가 마운트되기 전에 실행됨');
     });
 
-    // 컴포넌트가 마운트된 후에 실행됨
+    
     onMounted(() => {
       console.log('컴포넌트가 마운트된 후에 실행됨');
     });
 
-    // 컴포넌트가 업데이트되기 전에 실행됨
+    
     onBeforeUpdate(() => {
       console.log('컴포넌트가 업데이트되기 전에 실행됨');
     });
 
-    // 컴포넌트가 업데이트된 후에 실행됨
+    
     onUpdated(() => {
       console.log('컴포넌트가 업데이트된 후에 실행됨');
     });
 
-    // 컴포넌트가 언마운트되기 전에 실행됨
+    
     onBeforeUnmount(() => {
       console.log('컴포넌트가 언마운트되기 전에 실행됨');
     });
 
-    // 컴포넌트가 언마운트된 후에 실행됨
+    
     onUnmounted(() => {
       console.log('컴포넌트가 언마운트된 후에 실행됨');
     });
@@ -102,6 +98,11 @@ export default {
 /*
     const는 상수를 선언할 때 사용되며, 한 번 할당된 값을 변경할 수 없습니다.
     let은 변수를 선언할 때 사용되며, 값을 재할당할 수 있습니다.
+
+    이러한 Composition API 함수들은 Vue 3에서 도입되었으며, 
+    구성 기반 API로 코드를 조직화하고 재사용 가능한 로직을 생성하는 데 유용
+    ref()와 reactive()는 Vue의 반응성 시스템을 활용하여 데이터를 관리하고 화면을 업데이트하는 데 도움
+
 */
 // ref로 원시값을 반응형으로 만들기
     const refmsg = ref('');  
