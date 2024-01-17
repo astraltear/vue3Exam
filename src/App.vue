@@ -16,11 +16,15 @@
       v-bind:label="item.label" 
       v-bind:done="item.done"
       @checkbox-changed="updateDoneStatus"
+      @item-deleted="deleteToDo(item.id)"
+      @item-edited2="editToDo(item.id, $event)"
     ></ToDoItem>
   </li>
 </ul>
+
 <p>{{ ToDoItems.filter(it => it.done).length }} /{{ ToDoItems.length }}</p>
 <p>{{ listSummary }}</p>
+<p>event:::::{{ $event }}</p>
 </template>
 
 <script>
@@ -35,6 +39,7 @@ import ExamVue5 from './components/ExamVue5.vue';
 import {uniqueId} from "lodash";
 import ToDoItem from './components/ToDoItem.vue';
 import ToDoForm from "./components/ToDoForm";
+
 
 export default {
   components: {
@@ -68,6 +73,17 @@ export default {
       console.log("Todo added:::",newLable);
       this.ToDoItems.push({id:uniqueId("todo-"), label: newLable, done: false})
     },
+
+    deleteToDo(toDoId) {
+      const itemIndex = this.ToDoItems.findIndex((item) => item.id === toDoId);
+      this.ToDoItems.splice(itemIndex, 1);
+    },
+    editToDo(toDoId, newLabel) {
+      console.log("editToDo.newLabel:"+newLabel);
+      const toDoToEdit = this.ToDoItems.find((item) => item.id === toDoId);
+      toDoToEdit.label = newLabel;
+    },
+
   },
 }
 </script>
