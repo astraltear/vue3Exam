@@ -48,9 +48,9 @@ stories : {{ stories }}<br>
 <button @click="upvote">votes {{ votes }}</button>
 <hr>
 
-=========================$ExamVue1 data start ===========================
+=========================ExamVue1 data start ===========================
 <div>data : {{ $data }}</div>
-=========================$ExamVue1 data end ===========================
+=========================ExamVue1 data end ===========================
 <hr>
 
 </template>

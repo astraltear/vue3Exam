@@ -6,18 +6,18 @@
 </li>
 
 <hr> 
-<h1>famous.length : {{famous.length }}  </h1>
+<p>famous.length : {{famous.length }}  </p>
 <p>famous:{{ famous }}</p>
 <hr> 
 
 <input v-model="query">
-<h1>search.length : {{search.length }}</h1>
-<p>search:{{ search }}</p>
+<p>search.length : {{search.length }}</p>
+<p >search    {{ search }}</p>
 
 
-=========================$ExamVue5 data start===========================
+=========================ExamVue5 data start===========================
 <div>data : {{ $data }}</div>
-=========================$ExamVue5 data end===========================
+=========================ExamVue5 data end===========================
 <hr>
 
 

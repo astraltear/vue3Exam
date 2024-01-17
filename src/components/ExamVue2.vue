@@ -47,9 +47,9 @@ objItem : {{ objItem }}
 </option>
 </select>
 <hr>
-=========================$ExamVue2 data start===========================
+=========================ExamVue2 data start===========================
 <div>result : {{ result }}</div>
-=========================$ExamVue2 data end===========================
+=========================ExamVue2 data end===========================
 <hr>
 </template>
 
