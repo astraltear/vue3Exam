@@ -7,37 +7,39 @@
 <ExamVue4></ExamVue4>
 <ExamVue5></ExamVue5>
 
-
+<h1>ToDoSample</h1>
+<ToDoForm @todo-added="addToDo"></ToDoForm>
 <ul>
-  <li>
-
+  <li v-for="item in ToDoItems" v-bind:key="item.id">
+    <ToDoItem
+      v-bind:id="item.id"
+      v-bind:label="item.label" 
+      v-bind:done="item.done"
+      @checkbox-changed="updateDoneStatus"
+    ></ToDoItem>
   </li>
 </ul>
-<ToDoItem></ToDoItem>
-  
+<p>{{ ToDoItems.filter(it => it.done).length }} /{{ ToDoItems.length }}</p>
+<p>{{ listSummary }}</p>
 </template>
 
 <script>
 
+import ExamVue0 from './components/ExamVue0.vue';
 import examvue1  from './components/ExamVue1.vue'
 import ExamVue2 from './components/ExamVue2.vue';
 import ExamVue3 from './components/ExamVue3.vue';
 import ExamVue4 from './components/ExamVue4.vue';
 import ExamVue5 from './components/ExamVue5.vue';
-import ExamVue0 from './components/ExamVue0.vue';
 
 import {uniqueId} from "lodash";
 import ToDoItem from './components/ToDoItem.vue';
+import ToDoForm from "./components/ToDoForm";
 
 export default {
   components: {
-    ExamVue0,
-    examvue1,
-    ExamVue2,
-    ExamVue3,
-    ExamVue4,
-    ExamVue5,
-    ToDoItem,
+    ExamVue0, examvue1, ExamVue2, ExamVue3, ExamVue4, ExamVue5,
+    ToDoItem, ToDoForm,
 
   },
   data() {
@@ -49,6 +51,23 @@ export default {
         { id: uniqueId("todo-"), label: "Create a to-do list", done: false },
       ],
     }
+  },
+  computed:{
+    listSummary() {
+      const numberFinishedItems = this.ToDoItems.filter((item) =>item.done).length;
+      return `${numberFinishedItems} out of ${this.ToDoItems.length} items completed`;
+    }
+  },
+  methods: {
+    updateDoneStatus(obj){
+      console.log("updateDoneStatus::"+obj.uid);
+      const item = this.ToDoItems.find((it) => it.id = obj.uid );
+      item.done = !item.done;
+    },
+    addToDo(newLable){
+      console.log("Todo added:::",newLable);
+      this.ToDoItems.push({id:uniqueId("todo-"), label: newLable, done: false})
+    },
   },
 }
 </script>
