@@ -9,17 +9,22 @@ export default {
     return
 
 */
-import { ref, onMounted, watch  } from 'vue';
+import { ref, onMounted, watch, reactive  } from 'vue';
 
-const count = ref(0);
+/*
+reactive()는 객체(배열, Map, Set과 같은 빌트인 타입 포함)에서만 작동
+반면에 ref()는 모든 타입의 값을 사용할 수 있으며, 
+.value 속성으로 내부 값을 노출하는 객체를 생성합니다.
+*/
+const counter = reactive({count: 0});
 const msg = ref('');
 
 function increment() {
-  count.value++;
+  counter.count++;
 }
 
 onMounted(() => {
-  console.log(`숫자 세기의 초기값은 ${ count.value } 입니다.`)
+  console.log(`숫자 세기의 초기값은 ${ counter.count } 입니다.`)
 });
 
 // watch 함수는 여러 개의 대상을 감시할 수도 있습니다. 예를 들어, 여러 개의 ref를 동시에 감시하려면 배열 형태
@@ -31,7 +36,7 @@ watch(msg, () => {
 </script>
 
 <template>
-  <button v-on:click="increment">{{ count }}</button>
-  <input v-model="msg">{{ msg }}
+  <button v-on:click="increment">{{ counter.count }}</button>
+  <input v-model="msg">{{ msg.split('').reverse().join('') }} <!-- 유효한 JavaScript 표현식을 사용 가능   -->
 </template>
 
