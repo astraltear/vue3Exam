@@ -1,4 +1,11 @@
 <template>
+<!--
+v-text
+v-html
+v-model
+v-on:click  @click    
+-->
+
  <h1>Vue0</h1>
  <p>{{ mytext }}</p>
  <p v-text="mytext"></p>
