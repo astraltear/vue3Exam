@@ -34,6 +34,13 @@ export default {
                                 // 변수가 아니라 객체의 특성을 띈다 
    }
 
+
+   // watch 함수는 여러 개의 대상을 감시할 수도 있습니다. 예를 들어, 여러 개의 ref를 동시에 감시하려면 배열 형태
+   // watch([message, count], ([newMsg, newCount], [oldMsg, oldCount]) => {
+    watch(msg, () => {
+      console.log('값이 변경되었습니다:',msg.value);
+    });   
+
    onMounted(() => {
     console.log('component mounted')
    })
