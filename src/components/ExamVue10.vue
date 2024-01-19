@@ -97,7 +97,10 @@
 <template>
   <div>
     {{ count }}<button v-on:click="increase">click</button><hr>
-    <input v-bind:value="txt1" v-on:input="onInput" >{{ txt1 }}<hr>
+    <input v-bind:value="txt1" v-on:input="onInput" >{{ txt1 }}<hr>  <!--  v-bind, v-on으로 양방향 바인딩을 만들 수 있다. 이것을 대체하는 것이 v-model이다  
+                                                                           v-model은 <input>의 값을 바인딩된 상태와 자동으로 동기화하므로, 
+                                                                           더 이상 이에 대한 이벤트 핸들러를 사용할 필요가 없습니다.
+                                                                      -->
     <input v-model="txt2">{{ txt2 }}
   </div>
 </template>
