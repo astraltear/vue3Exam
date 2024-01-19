@@ -8,7 +8,7 @@
 <template>
   <div>
     <p>{{ message }}</p>
-    <exam-vue9-child v-bind:prop-message="message" message2="PARAM2"></exam-vue9-child>
+    <exam-vue9-child v-bind:prop-message="message"  :message3="'PARAM-THIRD'" message2="PARAM2"></exam-vue9-child>
   </div>
 </template>
 
