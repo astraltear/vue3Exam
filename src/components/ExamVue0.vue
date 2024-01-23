@@ -1,5 +1,35 @@
 <template>
 <!--
+
+화살표 함수 설명
+this 바인딩: 화살표 함수는 자신만의 this를 생성하지 않고, 
+            주변 범위의 this를 그대로 사용합니다. 
+            따라서 일반 함수와는 달리 this가 함수 내부에서 변경되지 않습니다.
+
+인자가 하나인 경우 괄호 생략 가능
+
+단일 표현식인 경우 중괄호 및 return 생략 가능: 
+            함수가 단일 표현식으로 구성되어 있는 경우 중괄호 및 return을 생략
+            이 경우 표현식의 결과가 자동으로 반환
+
+function add(a, b) {                        const add = (a, b) => {
+  return a + b;                 ==>              return a + b;
+}                                           }
+
+
+// 매개변수가 하나인 경우
+const square = x => x * x;
+
+// 매개변수가 두 개인 경우
+const add = (a, b) => a + b;
+
+// 복수의 표현식이 있는 경우
+const multiply = (a, b) => {
+  const result = a * b;
+  return result;
+};
+
+
 v-text
 v-html
 v-model
