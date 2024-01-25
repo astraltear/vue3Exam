@@ -8,7 +8,9 @@
   <!-- 
     v-bind:class 또는 간단히 :class 디렉티브를 사용하여 동적으로 클래스를 설정
     이 코드에서 red라는 클래스는 isRed라는 데이터 속성의 값에 따라 동적으로 적용
-    만약 isRed가 true이면 해당 요소에 red 클래스가 적용되고, false이면 클래스가 제거됩니다.
+
+    isRed가 true이면 해당 요소에 red 클래스가 적용되고, 
+    isRed가 false이면 클래스가 제거
    -->
   <p :class="{ red: isRed }" @click="toggleRed">
       This should be red... but click me to toggle it.
