@@ -14,8 +14,10 @@ npx (Node Package eXecute):
 간단한 예시로 설명하면, Vue.js 프로젝트를 생성하는데:
 
 npm install -g create-vue: create-vue 패키지를 글로벌로 설치합니다.
+
 npx create-vue: 로컬에 create-vue를 설치하지 않고 최신 버전으로 프로젝트를 생성합니다.
-즉, npm은 패키지 관리와 설치를 담당하고, npx는 일회성 명령을 실행하거나 로컬에 설치하지 않고 패키지를 실행하는 데에 특화된 도구입니다.
+
+
 
 
 # vue3 examples
