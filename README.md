@@ -27,6 +27,10 @@ npx create-vue: 로컬에 create-vue를 설치하지 않고 최신 버전으로 
 npm install -g @vue/cli
 vue create my-vue3-project
 
+## vite cli설치
+npm install -g create-vite
+create-vite my-vue3-project
+
 ## vue 프로젝트 만들기 2
 ## vite로 설치하는 방법
 npx create-vite
