@@ -47,7 +47,7 @@ export default {
       age: 30
     })
   
-    function test(){
+    function btn1(){
        const refsState = toRefs(state);
        console.log(refsState.name) // 참조로 변환된 속성, .value 없이 사용 가능
        console.log(refsState.name.value)  // 실제 값
@@ -57,10 +57,23 @@ export default {
        console.log(newState.name.value)  // 실제 값
     }
 
+   const refObject = ref({count: 0})
+   const refPrimitive = ref(0);
+   const reactiveState = reactive( {count : 0, contents: {title: "DEFAULT"} } )
+   const plainState = {count : 0, contents: {title: "DEFAULT"} }
+
+   console.log(refObject)
+   console.log(refPrimitive)
+   console.log(reactiveState)
+
+   console.log(refObject.value.count)
+   console.log(refPrimitive.value)
+   console.log(reactiveState.count)
+
     return {
     //...toRefs(state),
     //  state,
-     test,
+    btn1,
     }
   }
 }
@@ -68,5 +81,5 @@ export default {
 
 </script>
 <template>
-  <div @click="test">1</div>
+  <div @click="btn1">1</div>
 </template>
