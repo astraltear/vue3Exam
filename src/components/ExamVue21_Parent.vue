@@ -10,7 +10,7 @@
 import ExamVue21_Child from './components/ExamVue21_Child.vue';
 
 export default{
-    setup(props) {
+    setup() {
         return {  };
     },
     components: { ExamVue21_Child }
