@@ -1,13 +1,15 @@
 <template>
   <div>
     <greeting></greeting>
+    <alert-box>Something bad happened.</alert-box>
     <div>
       <buttonCounter/>
       <buttonCounter></buttonCounter>
     </div>
-    <div>
+    <div :style="{ fontSize: postFontSize + 'em' }">
       <blog-post v-for=" post in posts"
-      v-bind:title="post.title"></blog-post>
+      v-bind:post="post"
+      v-on:enlarge-text="postFontSize += 0.1"></blog-post>
     </div>
   </div>
 
@@ -21,12 +23,14 @@ export default {
   
     setup() {
       const posts = ref({});
+      const postFontSize=ref(1) ;
 
       onMounted( async () =>{
         try {
           const response = await fetch('https://jsonplaceholder.typicode.com/posts')
           const jsondata = await response.json();
           posts.value = jsondata;
+          
         } catch(e){
           console.error('Error fetching data:', e);
         }
@@ -41,7 +45,7 @@ export default {
       //   posts = data
       // })
 
-      return {posts, }
+      return {posts, postFontSize, }
     },
   
     components : {
@@ -62,8 +66,19 @@ export default {
           template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
       },
       blogPost : {
-        props : {title : String },
-        template: '<h3>{{ title }}</h3>'
+        props : {post : Object },
+        template: `<h2>{{post.userId}} :{{post.id}}</h2>
+                  <h3>{{ post.title }}</h3>
+                  <h4>{{post.body}}</h4>
+                  <button v-on:click="$emit('enlarge-text')">Enlarge text</button>
+                `
+        
+      },
+      alertBox : {
+        template: `<div class="demo-alert-box">
+                      <strong>Error!</strong>  
+                      [<slot></slot>]   
+                  </div>`
       },
 
     }
