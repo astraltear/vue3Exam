@@ -25,10 +25,14 @@
 <p>{{ ToDoItems.filter(it => it.done).length }} /{{ ToDoItems.length }}</p>
 <p>{{ listSummary }}</p>
 <p>event:::::{{ $event }}</p>
+<hr>
+
+
+
 </template>
 
 <script>
-
+/* eslint-disable no-unused-vars  */
 import ExamVue0 from './components/ExamVue0.vue';
 import examvue1  from './components/ExamVue1.vue'
 import ExamVue2 from './components/ExamVue2.vue';
@@ -39,6 +43,7 @@ import ExamVue5 from './components/ExamVue5.vue';
 import {uniqueId} from "lodash";
 import ToDoItem from './components/ToDoItem.vue';
 import ToDoForm from "./components/ToDoForm";
+
 
 
 export default {

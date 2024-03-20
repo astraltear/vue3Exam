@@ -9,6 +9,7 @@
 </template>
 
 <script>
+/* eslint-disable no-unused-vars  */
 import { reactive } from 'vue';
 
 export default {
