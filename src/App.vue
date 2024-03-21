@@ -28,6 +28,14 @@
 <hr>
 
 
+<div>
+  <div><RouterLink to="/">Home</RouterLink></div>
+  <div><RouterLink to="/about">About</RouterLink></div>
+  <div><RouterLink to="/page">PAGE</RouterLink></div>
+  <div><RouterLink to="/page/tagname">PAGE PARAM</RouterLink></div>
+  <RouterView />      
+</div>
+
 
 </template>
 
@@ -43,16 +51,21 @@ import ExamVue5 from './components/ExamVue5.vue';
 import {uniqueId} from "lodash";
 import ToDoItem from './components/ToDoItem.vue';
 import ToDoForm from "./components/ToDoForm";
-
+import { RouterLink, RouterView } from 'vue-router'
 
 
 export default {
   components: {
     ExamVue0, examvue1, ExamVue2, ExamVue3, ExamVue4, ExamVue5,
-    ToDoItem, ToDoForm,
+    ToDoItem, ToDoForm,RouterLink, RouterView
 
   },
   data() {
+
+    
+    console.log("BASE URL::::::::::",process.env.BASE_URL)
+    
+
     return {
       ToDoItems: [
         { id: uniqueId("todo-"), label: "Learn Vue", done: false },
