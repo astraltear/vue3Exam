@@ -28,15 +28,16 @@ npx local-web-server
 npm install -g @vue/cli
 vue create my-vue3-project
 
+## vue 프로젝트 만들기 2
 ## vite cli설치
 npm install -g create-vite
 create-vite my-vue3-project
 
-## vue 프로젝트 만들기 2
+## vue 프로젝트 만들기 3
 ## vite로 설치하는 방법
 npx create-vite
 
-## vue 프로젝트 만들기 3
+## vue 프로젝트 만들기 4
 ## npx로  vue생성 
 npx create-vue
 
