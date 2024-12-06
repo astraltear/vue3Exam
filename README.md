@@ -47,24 +47,18 @@ npx create-vue
 
 
 ## Project setup
-```
 npm install
-```
+
 
 ### Compiles and hot-reloads for development
-```
 npm run serve
-```
 
 ### Compiles and minifies for production
-```
 npm run build
-```
 
 ### Lints and fixes files
-```
 npm run lint
-```
+
 
 
 ### 설치된 패키지 확인(  -g 옵션은 글로벌로 설치된 패키지 확인   )
