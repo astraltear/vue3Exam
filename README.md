@@ -60,11 +60,6 @@ npm run build
 npm run lint
 
 
-
 ### 설치된 패키지 확인(  -g 옵션은 글로벌로 설치된 패키지 확인   )
-
 npm list
 npm list
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
