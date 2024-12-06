@@ -45,10 +45,15 @@ npx create-vite
 ## npx로  vue생성 
 npx create-vue
 
+## eslint off
+설정파일에서 off하는 것은 실패했고,
+각 vue 파일에 아래와 같이 하나씩 해야 함
+/* eslint-disable no-unused-vars   */
+/* eslint-disable space-before-function-paren   */
+/* eslint-disable space-before-blocks  */
 
 ## Project setup
 npm install
-
 
 ### Compiles and hot-reloads for development
 npm run serve
@@ -62,4 +67,5 @@ npm run lint
 
 ### 설치된 패키지 확인(  -g 옵션은 글로벌로 설치된 패키지 확인   )
 npm list
-npm list
+
+
