@@ -13,8 +13,11 @@ npx (Node Package eXecute):
 주로 글로벌로 설치하지 않고 최신 버전의 패키지를 사용할 때 활용됩니다.
 간단한 예시로 설명하면, 
 Vue.js 프로젝트를 생성하는데
+
 npm install -g create-vue: create-vue 패키지를 글로벌로 설치합니다.
+
 npx create-vue: 로컬에 create-vue를 설치하지 않고 최신 버전으로 프로젝트를 생성합니다.
+
 
 
 # 참고 npx로 간단한 웹 서버 띄위기
