@@ -46,11 +46,29 @@ npx create-vite
 npx create-vue
 
 ## eslint off
-설정파일에서 off하는 것은 실패했고,
+
+.eslintrc.js 파일 내에 아래의 내용 추가 
+
+rules: {
+  // 모든 규칙을 명시적으로 끄기
+  'no-trailing-spaces': 'off',
+  'no-unused-vars': 'off',
+  'no-console': 'off',
+  'vue/no-unused-components': 'off',
+  'vue/no-unused-vars': 'off',
+  'vue/multi-word-component-names': 'off',
+  // 모든 가능한 규칙 비활성화
+  'eslint:recommended': 'off'
+}
+
+
+
+
 각 vue 파일에 아래와 같이 하나씩 해야 함
-/* eslint-disable no-unused-vars   */
-/* eslint-disable space-before-function-paren   */
-/* eslint-disable space-before-blocks  */
+/* eslint-disable */
+/* eslint-disable no-unused-vars */
+/* eslint-disable space-before-function-paren */
+/* eslint-disable space-before-blocks */
 
 ## Project setup
 npm install
@@ -67,5 +85,10 @@ npm run lint
 
 ### 설치된 패키지 확인(  -g 옵션은 글로벌로 설치된 패키지 확인   )
 npm list
+
+
+### eslint off
+
+
 
 
