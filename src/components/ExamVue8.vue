@@ -46,7 +46,7 @@ export default {
       data 옵션 안에서 정의된 데이터는 Vue.js에 의해 반응형으로 관리되며, 
       데이터가 변경될 때마다 관련된 뷰가 업데이트
     */
-    return {titleClass,setRed,setBlue,picked };   // 갹체를 반환한다. 
+    return {titleClass,setRed,setBlue,picked };   // 갹체를 사용할 수 있게 노출처리 
   }
 }
 
