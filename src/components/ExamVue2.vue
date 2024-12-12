@@ -34,7 +34,7 @@ objItem : {{ objItem }}
 
 
 <span v-for="hobby in hobbys" v-bind:key="hobby">
-<input type="checkbox" v-model="result.hobby" v-bind:value="hobby">
+<input type="checkbox" v-model="result.selectedhobby" v-bind:value="hobby">
 <label>{{hobby}}</label>
 </span>
 <hr>
@@ -102,6 +102,11 @@ export default {
     이러한 Composition API 함수들은 Vue 3에서 도입되었으며, 
     구성 기반 API로 코드를 조직화하고 재사용 가능한 로직을 생성하는 데 유용
     ref()와 reactive()는 Vue의 반응성 시스템을 활용하여 데이터를 관리하고 화면을 업데이트하는 데 도움
+	
+	reactive() : 	객체 전체를 반응형으로 만듦
+					ref()와 달리 객체/배열에 적합
+					중첩된 객체도 반응형으로 처리
+					원본 객체를 프록시로 감싸서 변경 감지
 
 */
 // ref로 원시값을 반응형으로 만들기
@@ -113,12 +118,12 @@ export default {
 
     const name ='';
     const gender='';
-    const hobby=[];
+    const selectedhobby=[];
     const hobbys = ['sports','photo','music','movie']
     const country ='';
     const countrys = ['kr','us','cn','jp']
 
-    const result = reactive( {name, gender,hobby,country} )
+    const result = reactive( {name, gender,selectedhobby,country} )
 
     return { refmsg, abbr,votes   ,objItem,   result  ,hobbys,countrys  }
 
