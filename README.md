@@ -13,8 +13,13 @@ npx (Node Package eXecute):
 주로 글로벌로 설치하지 않고 최신 버전의 패키지를 사용할 때 활용됩니다.
 간단한 예시로 설명하면, 
 Vue.js 프로젝트를 생성하는데
-npm install -g create-vue: create-vue 패키지를 글로벌로 설치합니다.
-npx create-vue: 로컬에 create-vue를 설치하지 않고 최신 버전으로 프로젝트를 생성합니다.
+
+npm install -g create-vue 
+create-vue 패키지를 글로벌로 설치합니다.
+
+npx create-vue 
+로컬에 create-vue를 설치하지 않고 최신 버전으로 프로젝트를 생성합니다.
+
 
 
 # 참고 npx로 간단한 웹 서버 띄위기
@@ -40,32 +45,50 @@ npx create-vite
 ## npx로  vue생성 
 npx create-vue
 
+## eslint off
+
+.eslintrc.js 파일 내에 아래의 내용 추가 
+
+rules: {
+  // 모든 규칙을 명시적으로 끄기
+  'no-trailing-spaces': 'off',
+  'no-unused-vars': 'off',
+  'no-console': 'off',
+  'vue/no-unused-components': 'off',
+  'vue/no-unused-vars': 'off',
+  'vue/multi-word-component-names': 'off',
+  // 모든 가능한 규칙 비활성화
+  'eslint:recommended': 'off'
+}
+
+
+
+
+각 vue 파일에 아래와 같이 하나씩 해야 함
+/* eslint-disable */
+/* eslint-disable no-unused-vars */
+/* eslint-disable space-before-function-paren */
+/* eslint-disable space-before-blocks */
 
 ## Project setup
-```
 npm install
-```
 
 ### Compiles and hot-reloads for development
-```
 npm run serve
-```
 
 ### Compiles and minifies for production
-```
 npm run build
-```
 
 ### Lints and fixes files
-```
 npm run lint
-```
 
 
 ### 설치된 패키지 확인(  -g 옵션은 글로벌로 설치된 패키지 확인   )
-
-npm list
 npm list
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### eslint off
+
+
+
+
